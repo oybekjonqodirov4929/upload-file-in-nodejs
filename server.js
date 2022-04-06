@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 
 const fileStorageEngine = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "./images")
+        cb(null, "./files")
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + "--" + file.originalname)
